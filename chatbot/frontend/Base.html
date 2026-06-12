@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UASD - Chatbot Estatuto Orgánico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <i class="fa-solid fa-graduation-cap logo-icon"></i>
+            <div>
+                <h1>UASD</h1>
+                <p>Asistente Virtual del Estatuto Orgánico</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-container">
+        <aside class="sidebar">
+            <h3><i class="fa-solid fa-circle-info"></i> Consultas Frecuentes</h3>
+            <p class="sidebar-desc">Haz clic en una pregunta para enviarla automáticamente:</p>
+            
+            <div class="suggestions-list">
+                <button class="suggest-btn" onclick="enviarSugerencia('¿Cuál es la misión de la UASD?')">¿Cuál es la misión de la UASD?</button>
+                <button class="suggest-btn" onclick="enviarSugerencia('¿Cuáles son las funciones del Rector?')">¿Cuáles son las funciones del Rector?</button>
+                <button class="suggest-btn" onclick="enviarSugerencia('¿Qué dice el artículo 1 del estatuto?')">¿Qué dice el artículo 1 del estatuto?</button>
+                <button class="suggest-btn" onclick="enviarSugerencia('¿Cuáles son los derechos de los estudiantes?')">¿Cuáles son los derechos de los estudiantes?</button>
+            </div>
+        </aside>
+
+        <section class="chat-wrapper">
+            <div class="chat-box" id="chatBox">
+                <div class="message bot-message">
+                    ¡Hola! Soy tu asistente académico. Estoy preparado para responder tus dudas basándome estrictamente en el <strong>Estatuto Orgánico de la UASD</strong>. ¿En qué te puedo colaborar hoy?
+                </div>
+            </div>
+
+            <form class="chat-input-area" id="chatForm">
+                <input type="text" id="userInput" placeholder="Escribe tu pregunta sobre el estatuto aquí..." autocomplete="off" required>
+                <button type="submit" id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </section>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+</html>
